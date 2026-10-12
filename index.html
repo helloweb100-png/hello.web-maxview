@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ============================================================
+     SEO BASE
+     Max View Latino | Landing page premium (HTML + CSS + JS puros)
+     ============================================================ -->
+<title>Max View Latino | Películas, Series y TV en Vivo para Android y Roku</title>
+<meta name="description" content="Miles de películas, series y TV en vivo en español. Planes Básico, Plus y Premium para Android y Roku. Activa tu cuenta hoy y pide tu demo por WhatsApp.">
+<meta name="keywords" content="Max View Latino, streaming latino, películas y series, TV en vivo, IPTV México, planes streaming, Android TV, Roku, Plex, Jellyfin, Flujo TV, Stella TV">
+<meta name="author" content="Max View Latino">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#04061a">
+<meta name="color-scheme" content="dark">
+<!-- Al publicar, reemplaza TU-DOMINIO.com por el dominio real y activa el canonical -->
+<!-- <link rel="canonical" href="https://TU-DOMINIO.com/"> -->
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Max View Latino">
+<meta property="og:title" content="Max View Latino | Películas, Series y TV en Vivo">
+<meta property="og:description" content="Entretenimiento latino para tu TV, celular y tablet. Planes desde $150 MXN. Pide tu demo.">
+<meta property="og:image" content="https://TU-DOMINIO.com/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Max View Latino | Películas, Series y TV en Vivo">
+<meta name="twitter:description" content="Entretenimiento latino para tu TV, celular y tablet. Pide tu demo por WhatsApp.">
+<meta name="twitter:image" content="https://TU-DOMINIO.com/assets/og-cover.jpg">
+
+<link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/hero-render.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="styles.css">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  /* Red de seguridad: si app.js no carga, se retira el preloader y se muestra el contenido */
+  setTimeout(function () {
+    if (window.__mvReady) return;
+    document.documentElement.classList.add('fail-safe', 'is-ready');
+    document.body.classList.remove('is-loading');
+  }, 9000);
+</script>
+<noscript><style>#preloader{display:none!important}body.is-loading{overflow:auto!important}</style></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#max-view-latino",
+      "name": "Max View Latino",
+      "description": "Servicio de entretenimiento latino con películas, series y TV en vivo para Android y Roku.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+526371105206",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish",
+        "areaServed": "MX"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Max View Latino",
+      "serviceType": "Servicio de streaming de películas, series y TV en vivo",
+      "provider": { "@id": "#max-view-latino" },
+      "areaServed": "MX",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes Max View Latino",
+        "itemListElement": [
+          { "@type": "Offer", "name": "Plan Básico, 1 mes", "price": "150", "priceCurrency": "MXN" },
+          { "@type": "Offer", "name": "Plan Plus, 1 mes", "price": "200", "priceCurrency": "MXN" },
+          { "@type": "Offer", "name": "Plan Premium, 1 mes", "price": "250", "priceCurrency": "MXN" },
+          { "@type": "Offer", "name": "Jellyfin, 1 mes", "price": "100", "priceCurrency": "MXN" },
+          { "@type": "Offer", "name": "Plex, 1 mes", "price": "100", "priceCurrency": "MXN" },
+          { "@type": "Offer", "name": "Flujo TV, 1 mes", "price": "160", "priceCurrency": "MXN" },
+          { "@type": "Offer", "name": "Stella TV, 1 mes", "price": "160", "priceCurrency": "MXN" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿En qué dispositivos funciona Max View Latino?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Funciona en Android (TV Box, Fire Stick, celular y tablet) y en Roku. Max View Latino, Plex y Jellyfin están disponibles en ambas plataformas. Flujo TV y Stella TV funcionan en Android." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo activo mi cuenta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Elige tu plan y escríbenos por WhatsApp. Activamos tu cuenta de inmediato y te guiamos paso a paso para instalar la app en tu dispositivo." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo probar el servicio antes de contratar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Puedes solicitar tu demo por WhatsApp y ver cómo funciona en tu propia pantalla antes de decidir." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre los planes Básico, Plus y Premium?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Básico ofrece lo esencial para disfrutar en casa con total estabilidad. Plus suma mayor variedad de contenido, estrenos al día y fluidez total. Premium incluye acceso total ilimitado, máxima calidad, soporte prioritario y múltiples pantallas. Los tres funcionan en Android y Roku." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto ahorro si contrato más meses?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Mientras más meses eliges, menos pagas por mes. Con el plan de 1 año ahorras hasta 20% frente a pagar mes a mes: por ejemplo, $600 MXN en Premium, $480 MXN en Plus y $360 MXN en Básico." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué son Jellyfin, Plex, Flujo TV y Stella TV?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Son servidores y aplicaciones individuales que puedes contratar por separado si prefieres una opción específica. Jellyfin y Plex funcionan en Android y Roku; Flujo TV y Stella TV en Android." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo pago y renuevo mi suscripción?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos por WhatsApp y te indicamos las formas de pago disponibles y cómo renovar cuando lo necesites." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="is-loading">
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol><symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol><symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol><symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol><symbol id="i-play-circle" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48.24-94.78-64-40A8,8,0,0,0,100,88v80a8,8,0,0,0,12.24,6.78l64-40a8,8,0,0,0,0-13.56ZM116,153.57V102.43L156.91,128Z"/></symbol><symbol id="i-television" viewBox="0 0 256 256"><path d="M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64ZM40,80H144V200H40ZM216,200H160V80h56V200Zm-16-84a12,12,0,1,1-12-12A12,12,0,0,1,200,116Zm0,48a12,12,0,1,1-12-12A12,12,0,0,1,200,164Z"/></symbol><symbol id="i-device-mobile" viewBox="0 0 256 256"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></symbol><symbol id="i-devices" viewBox="0 0 256 256"><path d="M224,72H208V64a24,24,0,0,0-24-24H40A24,24,0,0,0,16,64v96a24,24,0,0,0,24,24H152v8a24,24,0,0,0,24,24h48a24,24,0,0,0,24-24V96A24,24,0,0,0,224,72ZM40,168a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H184a8,8,0,0,1,8,8v8H176a24,24,0,0,0-24,24v72Zm192,24a8,8,0,0,1-8,8H176a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8Zm-96,16a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h40A8,8,0,0,1,136,208Zm80-96a8,8,0,0,1-8,8H192a8,8,0,0,1,0-16h16A8,8,0,0,1,216,112Z"/></symbol><symbol id="i-film-slate" viewBox="0 0 256 256"><path d="M216,104H102.09L210,75.51a8,8,0,0,0,5.68-9.84l-8.16-30a15.93,15.93,0,0,0-19.42-11.13L35.81,64.74a15.75,15.75,0,0,0-9.7,7.4,15.51,15.51,0,0,0-1.55,12L32,111.56c0,.14,0,.29,0,.44v88a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V112A8,8,0,0,0,216,104ZM192.16,40l6,22.07-22.62,6L147.42,51.83Zm-66.69,17.6,28.12,16.24-36.94,9.75L88.53,67.37Zm-79.4,44.62-6-22.08,26.5-7L94.69,89.4ZM208,200H48V120H208v80Z"/></symbol><symbol id="i-broadcast" viewBox="0 0 256 256"><path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152Zm73.71,7.14a80,80,0,0,1-14.08,22.2,8,8,0,0,1-11.92-10.67,63.95,63.95,0,0,0,0-85.33,8,8,0,1,1,11.92-10.67,80.08,80.08,0,0,1,14.08,84.47ZM69,103.09a64,64,0,0,0,11.26,67.58,8,8,0,0,1-11.92,10.67,79.93,79.93,0,0,1,0-106.67A8,8,0,1,1,80.29,85.34,63.77,63.77,0,0,0,69,103.09ZM248,128a119.58,119.58,0,0,1-34.29,84,8,8,0,1,1-11.42-11.2,103.9,103.9,0,0,0,0-145.56A8,8,0,1,1,213.71,44,119.58,119.58,0,0,1,248,128ZM53.71,200.78A8,8,0,1,1,42.29,212a119.87,119.87,0,0,1,0-168,8,8,0,1,1,11.42,11.2,103.9,103.9,0,0,0,0,145.56Z"/></symbol><symbol id="i-lightning" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></symbol><symbol id="i-headset" viewBox="0 0 256 256"><path d="M201.89,54.66A103.43,103.43,0,0,0,128.79,24H128A104,104,0,0,0,24,128v56a24,24,0,0,0,24,24H64a24,24,0,0,0,24-24V144a24,24,0,0,0-24-24H40.36A88.12,88.12,0,0,1,190.54,65.93,87.39,87.39,0,0,1,215.65,120H192a24,24,0,0,0-24,24v40a24,24,0,0,0,24,24h24a24,24,0,0,1-24,24H136a8,8,0,0,0,0,16h56a40,40,0,0,0,40-40V128A103.41,103.41,0,0,0,201.89,54.66ZM64,136a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V136Zm128,56a8,8,0,0,1-8-8V144a8,8,0,0,1,8-8h24v56Z"/></symbol><symbol id="i-chat-circle-dots" viewBox="0 0 256 256"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></symbol><symbol id="i-whatsapp-logo" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol><symbol id="i-medal" viewBox="0 0 256 256"><path d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96ZM168,227.06l-36.43-18.21a8,8,0,0,0-7.16,0L88,227.06V174.37a87.89,87.89,0,0,0,80,0ZM128,152A56,56,0,1,0,72,96,56.06,56.06,0,0,0,128,152Zm0-96A40,40,0,1,1,88,96,40,40,0,0,1,128,56Z"/></symbol><symbol id="i-crown" viewBox="0 0 256 256"><path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM193.22,192H62.78L48.86,108.52,81.79,149A8,8,0,0,0,88,152a7.83,7.83,0,0,0,1.08-.07,8,8,0,0,0,6.26-4.74l29.3-67.4a27,27,0,0,0,6.72,0l29.3,67.4a8,8,0,0,0,6.26,4.74A7.83,7.83,0,0,0,168,152a8,8,0,0,0,6.21-3l32.93-40.52ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z"/></symbol><symbol id="i-star" viewBox="0 0 256 256"><path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65a8,8,0,0,0-8.38,0L69.09,215.94c-.15.09-.19.12-.38,0a.37.37,0,0,1-.17-.48l14.88-62.8a8,8,0,0,0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16A8,8,0,0,0,103,91.86l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153,91.86a8,8,0,0,0,6.75,4.92l63.92,5.16c.15,0,.24,0,.33.29S224,102.63,223.84,102.73Z"/></symbol><symbol id="i-sparkle" viewBox="0 0 256 256"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol><symbol id="i-gauge" viewBox="0 0 256 256"><path d="M207.06,72.67A111.24,111.24,0,0,0,128,40h-.4C66.07,40.21,16,91,16,153.13V176a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V152A111.25,111.25,0,0,0,207.06,72.67ZM224,176H119.71l54.76-75.3a8,8,0,0,0-12.94-9.42L99.92,176H32V153.13c0-3.08.15-6.12.43-9.13H56a8,8,0,0,0,0-16H35.27c10.32-38.86,44-68.24,84.73-71.66V80a8,8,0,0,0,16,0V56.33A96.14,96.14,0,0,1,221,128H200a8,8,0,0,0,0,16h23.67c.21,2.65.33,5.31.33,8Z"/></symbol><symbol id="i-stack" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></symbol><symbol id="i-key" viewBox="0 0 256 256"><path d="M216.57,39.43A80,80,0,0,0,83.91,120.78L28.69,176A15.86,15.86,0,0,0,24,187.31V216a16,16,0,0,0,16,16H72a8,8,0,0,0,8-8V208H96a8,8,0,0,0,8-8V184h16a8,8,0,0,0,5.66-2.34l9.56-9.57A79.73,79.73,0,0,0,160,176h.1A80,80,0,0,0,216.57,39.43ZM224,98.1c-1.09,34.09-29.75,61.86-63.89,61.9H160a63.7,63.7,0,0,1-23.65-4.51,8,8,0,0,0-8.84,1.68L116.69,168H96a8,8,0,0,0-8,8v16H72a8,8,0,0,0-8,8v16H40V187.31l58.83-58.82a8,8,0,0,0,1.68-8.84A63.72,63.72,0,0,1,96,95.92c0-34.14,27.81-62.8,61.9-63.89A64,64,0,0,1,224,98.1ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol><symbol id="i-list-checks" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/></symbol><symbol id="i-paper-plane-tilt" viewBox="0 0 256 256"><path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.49,29.8L102,154l41.3,84.87A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14,0-.07-40.06-82.3,48-48a8,8,0,0,0-11.31-11.31l-48,48L24.08,98.25l-.07,0,.14,0L216,40Z"/></symbol><symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol><symbol id="i-device-tablet" viewBox="0 0 256 256"><path d="M192,24H64A24,24,0,0,0,40,48V208a24,24,0,0,0,24,24H192a24,24,0,0,0,24-24V48A24,24,0,0,0,192,24ZM56,72H200V184H56Zm8-32H192a8,8,0,0,1,8,8v8H56V48A8,8,0,0,1,64,40ZM192,216H64a8,8,0,0,1-8-8v-8H200v8A8,8,0,0,1,192,216Z"/></symbol><symbol id="i-play-fill" viewBox="0 0 256 256"><path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"/></symbol><symbol id="b-plex" viewBox="0 0 24 24"><path d="M3.987 8.409c-.96 0-1.587.28-2.12.933v-.72H0v8.88s.038.018.127.037c.138.03.821.187 1.331-.249.441-.377.542-.814.542-1.318v-1.283c.533.573 1.147.813 2 .813 1.84 0 3.253-1.493 3.253-3.48 0-2.12-1.36-3.613-3.266-3.613Zm16.748 5.595.406.591c.391.614.894.906 1.492.908.621-.012 1.064-.562 1.226-.755 0 0-.307-.27-.686-.72-.517-.614-1.214-1.755-1.24-1.803l-1.198 1.779Zm-3.205-1.955c0-2.08-1.52-3.64-3.52-3.64s-3.467 1.587-3.467 3.573a3.48 3.48 0 0 0 3.507 3.52c1.413 0 2.626-.84 3.253-2.293h-2.04l-.093.093c-.427.4-.72.533-1.227.533-.787 0-1.373-.506-1.453-1.266h4.986c.04-.214.054-.307.054-.52Zm-7.671-.219c0 .769.11 1.701.868 2.722l.056.069c-.306.526-.742.88-1.248.88-.399 0-.814-.211-1.138-.579a2.177 2.177 0 0 1-.538-1.441V6.409H9.86l-.001 5.421Zm9.283 3.46h-2.39l2.247-3.332-2.247-3.335h2.39l2.248 3.335-2.248 3.332Zm1.593-1.286Zm-17.162-.342c-.933 0-1.68-.773-1.68-1.72s.76-1.666 1.68-1.666c.92 0 1.68.733 1.68 1.68 0 .946-.733 1.706-1.68 1.706Zm18.361-1.974L24 8.622h-2.391l-.87 1.293 1.195 1.773Zm-9.404-.466c.16-.706.72-1.133 1.493-1.133.773 0 1.373.467 1.507 1.133h-3Z"/></symbol><symbol id="b-jellyfin" viewBox="0 0 24 24"><path d="M12 .002C8.826.002-1.398 18.537.16 21.666c1.56 3.129 22.14 3.094 23.682 0C25.384 18.573 15.177 0 12 0zm7.76 18.949c-1.008 2.028-14.493 2.05-15.514 0C3.224 16.9 9.92 4.755 12.003 4.755c2.081 0 8.77 12.166 7.759 14.196zM12 9.198c-1.054 0-4.446 6.15-3.93 7.189.518 1.04 7.348 1.027 7.86 0 .511-1.027-2.874-7.19-3.93-7.19z"/></symbol><symbol id="b-roku" viewBox="0 0 24 24"><path d="M16.34 9.853l-2.254 2.254v-2.26H12.13v5.744h1.957v-2.33l2.353 2.33h2.46l-2.988-2.99 2.477-2.476v3.411c0 1.133.679 2.177 2.393 2.177.815 0 1.56-.462 1.922-.88l.88.759H24v-5.74h-1.951v3.718c-.22.384-.528.627-1.002.627-.482 0-.703-.286-.703-1.198V9.853zm-4.591 2.869A3.004 3.004 0 1 1 8.738 9.73a2.997 2.997 0 0 1 3.011 2.99m-3.011-1.57c-.518 0-.956.704-.956 1.572 0 .867.438 1.57.956 1.57.528 0 .968-.702.968-1.57 0-.869-.438-1.572-.968-1.572zm-2.206 4.447H4.313L2.55 13.153h-.594v2.44H0V8.26h2.8c1.616 0 2.935 1.1 2.935 2.45 0 .826-.505 1.562-1.273 2.013l2.07 2.875m-2.75-4.888A1.226 1.226 0 0 0 2.56 9.478h-.604v2.453h.605a1.225 1.225 0 0 0 1.22-1.221Z"/></symbol><symbol id="b-android" viewBox="0 0 24 24"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></symbol></svg>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============================================================
+     PRELOADER: simula "sintonizar señal" y abre como cortina de cine
+     ============================================================ -->
+<div id="preloader" class="pl" role="status" aria-live="polite" aria-label="Cargando Max View Latino">
+  <div class="pl-panel pl-top"></div>
+  <div class="pl-panel pl-bot"></div>
+  <div class="pl-core">
+    <div class="pl-spinner">
+      <svg class="pl-rings" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="plGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd982"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
+          <linearGradient id="plBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22b8ff"/><stop offset="1" stop-color="#2f7bff"/></linearGradient>
+        </defs>
+        <circle class="pl-track" cx="100" cy="100" r="94"/>
+        <circle class="pl-prog" cx="100" cy="100" r="94" pathLength="100"/>
+        <g class="pl-spin a"><circle class="pl-arc blue" cx="100" cy="100" r="82" pathLength="100"/></g>
+        <g class="pl-spin b"><circle class="pl-arc gold" cx="100" cy="100" r="72" pathLength="100"/></g>
+        <g class="pl-spin c"><circle class="pl-arc dots" cx="100" cy="100" r="62" pathLength="100"/></g>
+      </svg>
+      <img class="pl-mark" src="assets/logo-mark.png" width="480" height="418" alt="">
+    </div>
+    <p class="pl-count"><span data-pl-num>0</span><small>%</small></p>
+    <p class="pl-status" data-pl-status>Sintonizando señal</p>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAVEGACIÓN
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="nav-bar">
+    <a class="brand" href="#inicio" aria-label="Max View Latino, ir al inicio">
+      <img class="brand-mark" src="assets/logo-mark.png" width="42" height="37" alt="">
+      <span class="brand-name">Max<b>View</b><i>Latino</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#incluye">Qué incluye</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#planes">Planes</a>
+      <a href="#dispositivos">Dispositivos</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-gold btn-sm magnetic" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, quiero pedir mi demo de Max View Latino.">
+        <span>Quiero mi demo</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg>
+      </a>
+      <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu-nav" aria-label="Menú móvil">
+    <a href="#incluye">Qué incluye</a>
+    <a href="#proceso">Cómo funciona</a>
+    <a href="#planes">Planes</a>
+    <a href="#dispositivos">Dispositivos</a>
+    <a href="#faq">Preguntas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a class="btn btn-gold btn-lg menu-cta" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, quiero pedir mi demo de Max View Latino.">
+    <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-whatsapp-logo"/></svg><span>Quiero mi demo</span>
+  </a>
+</div>
+
+<main id="contenido">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="wall" data-wall></div>
+    <div class="beams"><i></i><i></i><i></i></div>
+    <canvas class="stars" data-particles></canvas>
+    <div class="hero-fade"></div>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="live-chip h-in" style="--i:0">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span class="live-label">Hoy en tu pantalla</span>
+        <span class="live-sep" aria-hidden="true"></span>
+        <span class="rotator" data-rotator aria-hidden="true"><span class="on">Películas</span><span>Series</span><span>TV en vivo</span><span>Estrenos</span></span>
+        <span class="sr-only">Películas, series, TV en vivo y estrenos</span>
+      </p>
+      <h1 id="hero-title" class="hero-title" data-split="hero">Dale <em>play</em> a todo lo que amas</h1>
+      <p class="hero-sub h-in" style="--i:3">Películas, series y TV en vivo en español, con activación inmediata para tu TV, celular o tablet.</p>
+      <div class="hero-cta h-in" style="--i:4">
+        <a class="btn btn-gold btn-lg magnetic" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, quiero mi cuenta de Max View Latino. ¿Me ayudan a activarla?">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-whatsapp-logo"/></svg><span>Quiero mi cuenta</span>
+        </a>
+        <a class="btn btn-glass btn-lg" href="#planes"><span>Ver planes</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+
+    <div class="hero-visual h-in" style="--i:2" data-tilt>
+      <div class="visual-glow" aria-hidden="true"></div>
+      <img class="visual-img" src="assets/hero-render.webp" width="1376" height="768" alt="Smart TV y celular mostrando la app Max View Latino con películas, series y TV en vivo" fetchpriority="high" decoding="async">
+      <span class="fchip c1"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-broadcast"/></svg>TV en vivo</span>
+      <span class="fchip c2"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg>Estrenos al día</span>
+      <span class="fchip c3"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-devices"/></svg>Android y Roku</span>
+      <span class="fchip c4"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-lightning"/></svg>Activación inmediata</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FRANJA DE CONFIANZA
+     ============================================================ -->
+<section class="trust" aria-label="Ventajas principales">
+  <ul class="container trust-grid">
+    <li class="reveal" style="--rd:0s">
+      <span class="trust-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-lightning"/></svg></span>
+      <div><strong>Activación inmediata</strong><span>Tu cuenta lista en cuanto nos escribes.</span></div>
+    </li>
+    <li class="reveal" style="--rd:.08s">
+      <span class="trust-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-headset"/></svg></span>
+      <div><strong>Soporte por WhatsApp</strong><span>Te acompañamos desde la instalación.</span></div>
+    </li>
+    <li class="reveal" style="--rd:.16s">
+      <span class="trust-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-devices"/></svg></span>
+      <div><strong>Android y Roku</strong><span>TV Box, Fire Stick, celular y tablet.</span></div>
+    </li>
+    <li class="reveal" style="--rd:.24s">
+      <span class="trust-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-play-circle"/></svg></span>
+      <div><strong>Demo disponible</strong><span>Pruébalo en tu pantalla antes de decidir.</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ============================================================
+     QUÉ INCLUYE (bento)
+     ============================================================ -->
+<section id="incluye" class="sec bento-sec" aria-labelledby="incluye-title">
+  <div class="aurora a-blue" aria-hidden="true" data-parallax="0.12"></div>
+  <div class="container">
+    <header class="sec-head">
+      <p class="eyebrow reveal">Qué incluye</p>
+      <h2 id="incluye-title" data-split>Todo el entretenimiento latino, en un solo lugar</h2>
+      <p class="lead reveal">Películas, series y televisión en vivo, respaldadas por servidores potentes y estables.</p>
+    </header>
+
+    <div class="bento">
+      <article class="tile t-movies spot reveal" style="--rd:0s">
+        <img class="tile-photo" src="assets/photos/photo-projector.webp" width="1500" height="1000" alt="Proyector de cine lanzando un haz de luz entre humo" loading="lazy" decoding="async">
+        <div class="tile-body">
+          <span class="tile-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-film-slate"/></svg></span>
+          <h3>Películas para cada noche</h3>
+          <p>Miles de películas para elegir, darle play y olvidarte del resto.</p>
+        </div>
+      </article>
+
+      <article class="tile t-live spot reveal" style="--rd:.08s">
+        <div class="waves" aria-hidden="true"><i></i><i></i><i></i><span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-broadcast"/></svg></span></div>
+        <div class="tile-body">
+          <p class="live-mini"><span class="live-dot" aria-hidden="true"></span>En vivo</p>
+          <h3>Televisión en vivo</h3>
+          <p>Canales en tiempo real, sin esperas ni cortes.</p>
+        </div>
+      </article>
+
+      <article class="tile t-series spot reveal" style="--rd:.16s">
+        <div class="fan" aria-hidden="true">
+          <i class="poster" data-v="1" style="--h1:215;--h2:268;--x:30%;--y:20%;--cx:50%"></i>
+          <i class="poster" data-v="3" style="--h1:28;--h2:350;--x:70%;--y:25%;--cx:46%"></i>
+          <i class="poster" data-v="2" style="--h1:190;--h2:236;--x:40%;--y:15%;--cx:54%"></i>
+        </div>
+        <div class="tile-body">
+          <span class="tile-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-stack"/></svg></span>
+          <h3>Series para maratonear</h3>
+          <p>Un capítulo más, cuando y donde quieras.</p>
+        </div>
+      </article>
+
+      <article class="tile t-premieres spot reveal" style="--rd:.08s">
+        <span class="tile-ic dark"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg></span>
+        <h3>Estrenos al día</h3>
+        <p>Con el Plan Plus ves lo nuevo sin esperar.</p>
+      </article>
+
+      <article class="tile t-stable spot reveal" style="--rd:.16s">
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="tile-body">
+          <span class="tile-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-gauge"/></svg></span>
+          <h3>Servidores potentes y estables</h3>
+          <p>Reproducción fluida para que nada interrumpa tu momento.</p>
+        </div>
+      </article>
+
+      <article class="tile t-screens spot reveal" style="--rd:.24s">
+        <div class="screens" aria-hidden="true"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-television"/></svg><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-device-tablet"/></svg><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-device-mobile"/></svg></div>
+        <div class="tile-body">
+          <h3>Múltiples pantallas</h3>
+          <p>Disponible en el Plan Premium.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="cta-band glass reveal">
+      <div>
+        <h3>¿Quieres verlo antes de decidir?</h3>
+        <p>Pide tu demo y pruébalo en tu propia pantalla.</p>
+      </div>
+      <a class="btn btn-gold btn-lg magnetic" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, quiero pedir mi demo de Max View Latino."><span>Clic aquí y pide tu demo</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE (único de la página)
+     ============================================================ -->
+<div class="marquee" aria-hidden="true" data-marquee>
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="word">Películas</span><i class="tri"></i>
+      <span class="word fill">Series</span><i class="tri"></i>
+      <span class="word">TV en vivo</span><i class="tri"></i>
+      <span class="word fill">Estrenos</span><i class="tri"></i>
+      <span class="word">Latino</span><i class="tri"></i>
+    </div>
+    <div class="marquee-group">
+      <span class="word">Películas</span><i class="tri"></i>
+      <span class="word fill">Series</span><i class="tri"></i>
+      <span class="word">TV en vivo</span><i class="tri"></i>
+      <span class="word fill">Estrenos</span><i class="tri"></i>
+      <span class="word">Latino</span><i class="tri"></i>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CÓMO FUNCIONA (scroll pinned)
+     ============================================================ -->
+<section id="proceso" class="story" aria-labelledby="proceso-title" data-story style="--n:4">
+  <div class="story-pin">
+    <div class="aurora a-violet" aria-hidden="true"></div>
+    <div class="container story-grid">
+      <div class="story-copy">
+        <h2 id="proceso-title" data-split>Del primer mensaje al primer play</h2>
+        <ol class="steps">
+          <li class="step on" data-step="0">
+            <span class="step-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-list-checks"/></svg></span>
+            <div><h3>Elige tu plan</h3><p>Compara Básico, Plus y Premium y escoge el periodo que más te convenga.</p></div>
+          </li>
+          <li class="step" data-step="1">
+            <span class="step-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-whatsapp-logo"/></svg></span>
+            <div><h3>Escríbenos por WhatsApp</h3><p>Dinos qué dispositivo usas. Si quieres, pide tu demo primero.</p></div>
+          </li>
+          <li class="step" data-step="2">
+            <span class="step-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-key"/></svg></span>
+            <div><h3>Activamos tu cuenta</h3><p>Activación inmediata y te guiamos con la instalación de la app.</p></div>
+          </li>
+          <li class="step" data-step="3">
+            <span class="step-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-play-circle"/></svg></span>
+            <div><h3>Dale play</h3><p>Abre la app y disfruta películas, series y TV en vivo.</p></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="stage" aria-hidden="true">
+        <div class="stage-rings"><i></i><i></i><i></i></div>
+
+        <div class="scene on" data-scene="0">
+          <div class="tags">
+            <span class="tag t1"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-medal"/></svg>Plan Básico</span>
+            <span class="tag t2 gold"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-crown"/></svg>Plan Plus</span>
+            <span class="tag t3"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>Plan Premium</span>
+          </div>
+        </div>
+
+        <div class="scene" data-scene="1">
+          <div class="chat">
+            <span class="chat-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-whatsapp-logo"/></svg></span>
+            <div class="bubble"><span>Hola, quiero mi cuenta</span></div>
+            <div class="bubble typing"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+
+        <div class="scene" data-scene="2">
+          <div class="done">
+            <svg viewBox="0 0 120 120" width="180" height="180"><circle class="done-ring" cx="60" cy="60" r="52" pathLength="100"/><path class="done-check" d="M36 62l16 16 32-34" pathLength="100"/></svg>
+            <p>Cuenta activa</p>
+          </div>
+        </div>
+
+        <div class="scene" data-scene="3">
+          <div class="play">
+            <i class="pulse"></i><i class="pulse"></i>
+            <img src="assets/logo-mark.png" width="480" height="418" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANES Y PRECIOS
+     ============================================================ -->
+<section id="planes" class="sec plans-sec" aria-labelledby="planes-title">
+  <div class="aurora a-gold" aria-hidden="true" data-parallax="0.1"></div>
+  <div class="container">
+    <header class="sec-head center">
+      <p class="eyebrow reveal">Planes</p>
+      <h2 id="planes-title" data-split>Elige tu plan y dale play hoy</h2>
+      <p class="lead reveal">Los tres planes funcionan en Android y Roku. Mientras más meses eliges, más ahorras.</p>
+    </header>
+
+    <div class="period reveal" role="radiogroup" aria-label="Periodo de suscripción" data-period>
+      <span class="period-thumb" aria-hidden="true"></span>
+      <button type="button" role="radio" aria-checked="true" data-i="0" data-unit="al mes" data-months="1">1 mes</button>
+      <button type="button" role="radio" aria-checked="false" data-i="1" data-unit="por 3 meses" data-months="3">3 meses</button>
+      <button type="button" role="radio" aria-checked="false" data-i="2" data-unit="por 6 meses" data-months="6">6 meses</button>
+      <button type="button" role="radio" aria-checked="false" data-i="3" data-unit="por 1 año" data-months="12">1 año<small>Ahorra 20%</small></button>
+    </div>
+
+    <div class="plans">
+      <article class="plan spot reveal" style="--rd:0s" data-plan="Plan Básico" data-prices="150,420,790,1440">
+        <header>
+          <span class="plan-medal"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-medal"/></svg></span>
+          <h3>Plan Básico</h3>
+          <p class="plan-tag">Lo esencial para disfrutar en casa con total estabilidad.</p>
+        </header>
+        <div class="plan-price"><span class="cur">$</span><span class="amt" data-amt>150</span><span class="mxn">MXN <span data-unit>al mes</span></span></div>
+        <p class="plan-note"><span data-permonth>&nbsp;</span><span class="save" data-save hidden></span></p>
+        <ul class="plan-list">
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Total estabilidad en casa</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Compatible con Android y Roku</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Activación inmediata</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Soporte por WhatsApp</li>
+        </ul>
+        <a class="btn btn-glass btn-block" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa-plan><span>Quiero el Plan Básico</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </article>
+
+      <article class="plan plan--featured spot reveal" style="--rd:.1s" data-plan="Plan Plus" data-prices="200,550,1050,1920">
+        <span class="plan-flag">Recomendado</span>
+        <header>
+          <span class="plan-medal gold"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-crown"/></svg></span>
+          <h3>Plan Plus</h3>
+          <p class="plan-tag">Mayor variedad de contenido, estrenos al día y fluidez total.</p>
+        </header>
+        <div class="plan-price"><span class="cur">$</span><span class="amt" data-amt>200</span><span class="mxn">MXN <span data-unit>al mes</span></span></div>
+        <p class="plan-note"><span data-permonth>&nbsp;</span><span class="save" data-save hidden></span></p>
+        <ul class="plan-list">
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Mayor variedad de contenido</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Estrenos al día</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Fluidez total</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Compatible con Android y Roku</li>
+        </ul>
+        <a class="btn btn-gold btn-block magnetic" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa-plan><span>Quiero el Plan Plus</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </article>
+
+      <article class="plan spot reveal" style="--rd:.2s" data-plan="Plan Premium" data-prices="250,690,1320,2400">
+        <header>
+          <span class="plan-medal"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+          <h3>Plan Premium</h3>
+          <p class="plan-tag">Acceso total ilimitado, máxima calidad y soporte prioritario.</p>
+        </header>
+        <div class="plan-price"><span class="cur">$</span><span class="amt" data-amt>250</span><span class="mxn">MXN <span data-unit>al mes</span></span></div>
+        <p class="plan-note"><span data-permonth>&nbsp;</span><span class="save" data-save hidden></span></p>
+        <ul class="plan-list">
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Acceso total ilimitado</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Máxima calidad</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Soporte prioritario</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Múltiples pantallas</li>
+        </ul>
+        <a class="btn btn-glass btn-block" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa-plan><span>Activar mi Plan Premium</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </article>
+    </div>
+
+    <div class="apps-head reveal">
+      <h3>Servidores y aplicaciones individuales</h3>
+      <p>¿Prefieres una opción específica? Contrátala por separado.</p>
+    </div>
+
+    <div class="apps">
+      <article class="app spot reveal" style="--rd:0s" data-plan="Jellyfin" data-prices="100,280,530,960">
+        <div class="app-top">
+          <span class="app-logo"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-jellyfin"/></svg></span>
+          <div><h4>Jellyfin</h4><p class="app-plat"><span>Android</span><span>Roku</span></p></div>
+        </div>
+        <div class="app-bottom">
+          <p class="app-price"><span class="amt" data-amt>$100</span><small>MXN <span data-unit>al mes</span></small></p>
+          <a class="btn btn-outline" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa-plan><span>Lo quiero</span></a>
+        </div>
+      </article>
+
+      <article class="app spot reveal" style="--rd:.08s" data-plan="Plex" data-prices="100,280,530,960">
+        <div class="app-top">
+          <span class="app-logo"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-plex"/></svg></span>
+          <div><h4>Plex</h4><p class="app-plat"><span>Android</span><span>Roku</span></p></div>
+        </div>
+        <div class="app-bottom">
+          <p class="app-price"><span class="amt" data-amt>$100</span><small>MXN <span data-unit>al mes</span></small></p>
+          <a class="btn btn-outline" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa-plan><span>Lo quiero en mi TV</span></a>
+        </div>
+      </article>
+
+      <article class="app spot reveal" style="--rd:.16s" data-plan="Flujo TV" data-prices="160,450,850,1550">
+        <div class="app-top">
+          <span class="app-logo mono">F</span>
+          <div><h4>Flujo TV</h4><p class="app-plat"><span>Android</span></p></div>
+        </div>
+        <div class="app-bottom">
+          <p class="app-price"><span class="amt" data-amt>$160</span><small>MXN <span data-unit>al mes</span></small></p>
+          <a class="btn btn-outline" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa-plan><span>Quiero Flujo TV</span></a>
+        </div>
+      </article>
+
+      <article class="app spot reveal" style="--rd:.24s" data-plan="Stella TV" data-prices="160,450,850,1550">
+        <div class="app-top">
+          <span class="app-logo mono">S</span>
+          <div><h4>Stella TV</h4><p class="app-plat"><span>Android</span></p></div>
+        </div>
+        <div class="app-bottom">
+          <p class="app-price"><span class="amt" data-amt>$160</span><small>MXN <span data-unit>al mes</span></small></p>
+          <a class="btn btn-outline" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa-plan><span>Quiero Stella TV</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DISPOSITIVOS (órbita)
+     ============================================================ -->
+<section id="dispositivos" class="sec dev-sec" aria-labelledby="dev-title">
+  <div class="aurora a-blue r" aria-hidden="true" data-parallax="-0.1"></div>
+  <div class="container">
+    <div class="dev-grid">
+      <div class="dev-copy">
+        <h2 id="dev-title" data-split>Funciona en la pantalla que ya tienes</h2>
+        <p class="lead reveal">Instala tu app en Android o Roku, entra con tu cuenta y listo. Sin cables ni equipos extra.</p>
+
+        <div class="plat-cards">
+          <article class="plat glass reveal" tabindex="0" data-focus="android" style="--rd:.05s">
+            <header><span class="plat-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-android"/></svg></span><div><h3>Android</h3><p>TV Box, Fire Stick, celular y tablet</p></div></header>
+            <ul class="chips">
+              <li>Max View Latino</li><li>Jellyfin</li><li>Plex</li><li>Flujo TV</li><li>Stella TV</li>
+            </ul>
+          </article>
+          <article class="plat glass reveal" tabindex="0" data-focus="roku" style="--rd:.15s">
+            <header><span class="plat-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-roku"/></svg></span><div><h3>Roku</h3><p>Tu TV con Roku</p></div></header>
+            <ul class="chips">
+              <li>Max View Latino</li><li>Plex</li><li>Jellyfin</li>
+            </ul>
+          </article>
+        </div>
+
+        <a class="btn btn-gold btn-lg magnetic reveal" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, quiero saber si Max View Latino funciona en mi dispositivo."><span>Quiero saber si funciona en mi TV</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </div>
+
+      <div class="orbit reveal" data-orbit aria-hidden="true">
+        <div class="orbit-core"><img src="assets/logo-mark.png" width="480" height="418" alt="" loading="lazy"></div>
+        <div class="ring r1">
+          <div class="node" style="--a:200deg" data-p="android roku"><span class="ochip"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-plex"/></svg>Plex</span></div>
+          <div class="node" style="--a:20deg" data-p="android roku"><span class="ochip"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-jellyfin"/></svg>Jellyfin</span></div>
+        </div>
+        <div class="ring r2">
+          <div class="node" style="--a:300deg" data-p="android"><span class="ochip mono"><b>F</b>Flujo TV</span></div>
+          <div class="node" style="--a:120deg" data-p="android"><span class="ochip mono"><b>S</b>Stella TV</span></div>
+        </div>
+        <div class="ring r3">
+          <div class="node" style="--a:250deg" data-p="android"><span class="ochip big"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-android"/></svg>Android</span></div>
+          <div class="node" style="--a:70deg" data-p="roku"><span class="ochip big"><svg class="ic" aria-hidden="true" focusable="false"><use href="#b-roku"/></svg></span></div>
+        </div>
+      </div>
+    </div>
+
+    <dl class="stats">
+      <div class="reveal" style="--rd:0s"><dt>apps y servidores</dt><dd><span class="count" data-count="5">0</span></dd></div>
+      <div class="reveal" style="--rd:.08s"><dt>plataformas compatibles</dt><dd><span class="count" data-count="2">0</span></dd></div>
+      <div class="reveal" style="--rd:.16s"><dt>planes para elegir</dt><dd><span class="count" data-count="3">0</span></dd></div>
+      <div class="reveal" style="--rd:.24s"><dt>de ahorro con plan anual</dt><dd><span class="count" data-count="20">0</span><em>%</em></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================================================
+     MOMENTOS (galería acordeón)
+     ============================================================ -->
+<section id="momentos" class="sec moments-sec" aria-labelledby="mom-title">
+  <div class="container">
+    <header class="sec-head">
+      <h2 id="mom-title" data-split>Para cada momento de tu semana</h2>
+      <p class="lead reveal">Del plan de sillón en pareja a la tarde de series con la familia.</p>
+    </header>
+    <div class="moments reveal" data-moments>
+      <figure class="moment on" tabindex="0">
+        <img src="assets/photos/photo-cinema-solo.webp" width="1100" height="1100" alt="Sala de cine casi vacía con asientos rojos" loading="lazy" decoding="async">
+        <figcaption><h3>Noche de película</h3><p>Apaga las luces y dale play.</p></figcaption>
+      </figure>
+      <figure class="moment" tabindex="0">
+        <img src="assets/photos/photo-remote.webp" width="1100" height="1100" alt="Mano sosteniendo un control remoto frente a una TV" loading="lazy" decoding="async">
+        <figcaption><h3>Maratón de series</h3><p>Control en mano, sin interrupciones.</p></figcaption>
+      </figure>
+      <figure class="moment" tabindex="0">
+        <img src="assets/photos/photo-audience.webp" width="1100" height="1100" alt="Personas disfrutando una función en una sala de cine" loading="lazy" decoding="async">
+        <figcaption><h3>Para compartir</h3><p>Más diversión cuando se ve en compañía.</p></figcaption>
+      </figure>
+      <figure class="moment" tabindex="0">
+        <img src="assets/photos/photo-popcorn.webp" width="1100" height="1100" alt="Cajas de palomitas listas para una función" loading="lazy" decoding="async">
+        <figcaption><h3>Plan en casa</h3><p>Tú pones las palomitas.</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section id="faq" class="sec faq-sec" aria-labelledby="faq-title">
+  <div class="container faq-grid">
+    <div class="faq-side">
+      <p class="eyebrow reveal">Preguntas frecuentes</p>
+      <h2 id="faq-title" data-split>Lo que quieres saber antes de empezar</h2>
+      <p class="lead reveal">Si tu duda no está aquí, escríbenos y te respondemos por WhatsApp.</p>
+      <a class="btn btn-glass btn-lg reveal" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, tengo una duda sobre Max View Latino."><span>Tengo una duda</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-chat-circle-dots"/></svg></a>
+    </div>
+
+    <div class="faq-list reveal" data-faq>
+      <div class="faq-item">
+        <h3><button type="button" aria-expanded="false" aria-controls="fa1" id="fq1"><span>¿En qué dispositivos funciona Max View Latino?</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq-a" id="fa1" role="region" aria-labelledby="fq1"><div><p>Funciona en Android (TV Box, Fire Stick, celular y tablet) y en Roku. Max View Latino, Plex y Jellyfin están disponibles en ambas plataformas. Flujo TV y Stella TV funcionan en Android.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button type="button" aria-expanded="false" aria-controls="fa2" id="fq2"><span>¿Cómo activo mi cuenta?</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq-a" id="fa2" role="region" aria-labelledby="fq2"><div><p>Elige tu plan y escríbenos por WhatsApp. Activamos tu cuenta de inmediato y te guiamos paso a paso para instalar la app en tu dispositivo.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button type="button" aria-expanded="false" aria-controls="fa3" id="fq3"><span>¿Puedo probar el servicio antes de contratar?</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq-a" id="fa3" role="region" aria-labelledby="fq3"><div><p>Sí. Puedes solicitar tu demo por WhatsApp y ver cómo funciona en tu propia pantalla antes de decidir.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button type="button" aria-expanded="false" aria-controls="fa4" id="fq4"><span>¿Qué diferencia hay entre Básico, Plus y Premium?</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq-a" id="fa4" role="region" aria-labelledby="fq4"><div><p>Básico ofrece lo esencial para disfrutar en casa con total estabilidad. Plus suma mayor variedad de contenido, estrenos al día y fluidez total. Premium incluye acceso total ilimitado, máxima calidad, soporte prioritario y múltiples pantallas. Los tres funcionan en Android y Roku.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button type="button" aria-expanded="false" aria-controls="fa5" id="fq5"><span>¿Cuánto ahorro si contrato más meses?</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq-a" id="fa5" role="region" aria-labelledby="fq5"><div><p>Mientras más meses eliges, menos pagas por mes. Con el plan de 1 año ahorras hasta 20% frente a pagar mes a mes: $600 MXN en Premium, $480 MXN en Plus y $360 MXN en Básico.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button type="button" aria-expanded="false" aria-controls="fa6" id="fq6"><span>¿Qué son Jellyfin, Plex, Flujo TV y Stella TV?</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq-a" id="fa6" role="region" aria-labelledby="fq6"><div><p>Son servidores y aplicaciones individuales que puedes contratar por separado si prefieres una opción específica. Jellyfin y Plex funcionan en Android y Roku; Flujo TV y Stella TV, en Android.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button type="button" aria-expanded="false" aria-controls="fa7" id="fq7"><span>¿Cómo pago y renuevo mi suscripción?</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq-a" id="fa7" role="region" aria-labelledby="fq7"><div><p>Escríbenos por WhatsApp y te indicamos las formas de pago disponibles y cómo renovar cuando lo necesites.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTO (formulario -> WhatsApp)
+     ============================================================ -->
+<section id="contacto" class="sec contact-sec" aria-labelledby="contact-title">
+  <div class="aurora a-violet" aria-hidden="true" data-parallax="0.1"></div>
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <h2 id="contact-title" data-split>Cuéntanos qué necesitas y lo activamos</h2>
+      <p class="lead reveal">Llena tus datos y te llevamos directo a WhatsApp con tu mensaje listo para enviar.</p>
+      <ul class="contact-list reveal">
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-whatsapp-logo"/></svg><div><strong>WhatsApp</strong><a href="https://wa.me/526371105206" target="_blank" rel="noopener">+52 637 110 5206</a></div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-lightning"/></svg><div><strong>Activación inmediata</strong><span>En cuanto confirmamos tu plan.</span></div></li>
+        <li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-headset"/></svg><div><strong>Te guiamos paso a paso</strong><span>Desde instalar la app hasta tu primer play.</span></div></li>
+      </ul>
+    </div>
+
+    <form class="form glass reveal" id="wa-form" novalidate aria-labelledby="form-title">
+      <h3 id="form-title">Tu mensaje de WhatsApp, listo en segundos</h3>
+      <div class="field">
+        <label for="f-name">Nombre</label>
+        <input id="f-name" name="nombre" type="text" autocomplete="name" placeholder="Ej. Mariana López" required aria-describedby="e-name">
+        <p class="err" id="e-name" role="alert"></p>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="f-device">Tu dispositivo</label>
+          <select id="f-device" name="dispositivo" required aria-describedby="e-device">
+            <option value="" disabled selected>Selecciona</option>
+            <option>TV Box Android</option>
+            <option>Fire Stick</option>
+            <option>Celular o tablet Android</option>
+            <option>Roku</option>
+            <option>Aún no estoy seguro</option>
+          </select>
+          <p class="err" id="e-device" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="f-plan">Lo que te interesa</label>
+          <select id="f-plan" name="plan" required aria-describedby="e-plan">
+            <option value="" disabled selected>Selecciona</option>
+            <option>Quiero pedir mi demo</option>
+            <option>Plan Básico</option>
+            <option>Plan Plus</option>
+            <option>Plan Premium</option>
+            <option>Jellyfin</option>
+            <option>Plex</option>
+            <option>Flujo TV</option>
+            <option>Stella TV</option>
+          </select>
+          <p class="err" id="e-plan" role="alert"></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-period">Periodo</label>
+        <select id="f-period" name="periodo">
+          <option>1 mes</option>
+          <option>3 meses</option>
+          <option>6 meses</option>
+          <option>1 año</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-msg">Mensaje (opcional)</label>
+        <textarea id="f-msg" name="mensaje" rows="3" placeholder="Cuéntanos algo más si lo necesitas"></textarea>
+      </div>
+      <button class="btn btn-gold btn-lg btn-block magnetic" type="submit"><span>Estoy listo, activa mi cuenta</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-paper-plane-tilt"/></svg></button>
+      <p class="form-note" data-form-note aria-live="polite">Se abrirá WhatsApp con tu mensaje. No guardamos tus datos en esta página.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA FINAL
+     ============================================================ -->
+<section class="final" aria-labelledby="final-title">
+  <img class="final-photo" src="assets/photos/photo-reel-bw.webp" width="1600" height="900" alt="" loading="lazy" decoding="async" data-parallax="0.12">
+  <div class="final-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="container final-inner">
+    <img class="final-mark reveal" src="assets/logo-mark.png" width="480" height="418" alt="Logo de Max View Latino" loading="lazy">
+    <h2 id="final-title" data-split>Tu próxima maratón empieza con un mensaje</h2>
+    <p class="lead reveal">Elige tu plan, escríbenos y activamos tu cuenta.</p>
+    <a class="btn btn-gold btn-xl magnetic reveal" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, estoy listo para activar mi cuenta de Max View Latino."><span>Estoy listo, dale play</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-play-fill"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio" aria-label="Max View Latino, ir al inicio">
+          <img class="brand-mark" src="assets/logo-mark.png" width="42" height="37" alt="" loading="lazy">
+          <span class="brand-name">Max<b>View</b><i>Latino</i></span>
+        </a>
+        <p>Entretenimiento latino para tu TV, celular y tablet. Películas, series y TV en vivo con activación inmediata.</p>
+      </div>
+      <nav class="footer-col" aria-label="Explora">
+        <h4>Explora</h4>
+        <a href="#incluye">Qué incluye</a>
+        <a href="#proceso">Cómo funciona</a>
+        <a href="#planes">Planes y precios</a>
+        <a href="#dispositivos">Dispositivos</a>
+        <a href="#faq">Preguntas frecuentes</a>
+      </nav>
+      <nav class="footer-col" aria-label="Planes">
+        <h4>Planes</h4>
+        <a href="#planes">Plan Básico</a>
+        <a href="#planes">Plan Plus</a>
+        <a href="#planes">Plan Premium</a>
+        <a href="#planes">Jellyfin, Plex, Flujo TV y Stella TV</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/526371105206" target="_blank" rel="noopener">WhatsApp +52 637 110 5206</a>
+        <a href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, quiero pedir mi demo de Max View Latino.">Pedir mi demo</a>
+        <a href="#contacto">Formulario de contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Max View Latino. Todos los derechos reservados.</p>
+      <p class="legal">Max View Latino es un servicio independiente y no está afiliado a Plex, Jellyfin, Roku ni Android. Las marcas mencionadas pertenecen a sus respectivos propietarios y se usan solo para indicar compatibilidad.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOTÓN FLOTANTE DE WHATSAPP
+     ============================================================ -->
+<div class="wa-float">
+  <p class="wa-tip" data-wa-tip role="note">¿Dudas? Escríbenos por WhatsApp<button type="button" aria-label="Cerrar aviso" data-wa-tip-close><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-x"/></svg></button></p>
+  <a class="wa-btn" href="https://wa.me/526371105206" target="_blank" rel="noopener" data-wa="Hola, me gustaría información de Max View Latino." aria-label="Escribir por WhatsApp a Max View Latino">
+    <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-whatsapp-logo"/></svg>
+  </a>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
