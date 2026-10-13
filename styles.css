@@ -393,6 +393,20 @@ body:has(.menu.is-open) .wa-float{opacity:0;pointer-events:none}
 .step p{color:var(--muted);font-size:.95rem;max-width:42ch}
 .stage{display:none}
 
+/* ---------- 10b. DESCARGAR APP (CTA intermedio) ---------- */
+.dl-sec{position:relative;isolation:isolate;overflow:clip;padding-block:clamp(48px,7vw,96px)}
+.dl-card{position:relative;isolation:isolate;overflow:hidden;display:grid;gap:24px;justify-items:center;text-align:center;padding:clamp(24px,4.5vw,56px);border-color:rgb(242 184 75 / .35);
+  background:radial-gradient(80% 120% at 50% 0%,rgb(242 184 75 / .17),transparent 70%),linear-gradient(145deg,rgb(255 255 255 / .08),rgb(255 255 255 / .025))}
+.dl-ic{width:68px;height:68px;border-radius:20px;display:grid;place-items:center;font-size:2rem;color:var(--ink);background:var(--grad-gold);box-shadow:0 14px 40px -12px rgb(242 184 75 / .7)}
+.dl-copy{display:grid;gap:12px;justify-items:center}
+.dl-copy h2{font-size:clamp(1.8rem,4.4vw,3rem);max-width:20ch}
+.dl-copy h2 em{font-style:normal}
+.dl-cta{display:flex;width:100%;border-radius:var(--r-pill);animation:pingGold 2.2s ease-out infinite}
+.dl-btn{width:100%;padding:1.3rem 1.2rem;font-size:clamp(1.05rem,2.6vw,1.3rem);gap:.85rem;white-space:normal;text-align:center}
+.dl-btn .ic{width:1.35em;height:1.35em}
+.dl-btn:hover .ic{transform:translateY(3px)}
+.dl-note{font-size:.82rem;color:var(--dim)}
+
 /* ---------- 11. PLANES ---------- */
 .plans-sec{background:var(--bg-1);border-block:1px solid var(--line)}
 .period{position:relative;display:grid;grid-template-columns:repeat(4,1fr);width:min(100%,560px);margin:0 auto clamp(34px,5vw,56px);padding:6px;border-radius:var(--r-pill);background:rgb(255 255 255 / .05);border:1px solid var(--line)}
@@ -612,6 +626,8 @@ body:has(.menu.is-open) .wa-float{opacity:0;pointer-events:none}
   .footer-brand{grid-column:auto}
   .period button{font-size:.9rem}
   .cta-band{grid-template-columns:1fr auto}
+  .dl-cta{display:inline-flex;width:auto}
+  .dl-btn{width:auto;padding-inline:clamp(2.2rem,5vw,3.6rem)}
 }
 
 @media (min-width:900px){
@@ -724,6 +740,8 @@ body:has(.menu.is-open) .wa-float{opacity:0;pointer-events:none}
 
 @media (max-width:340px){
   .brand-name i{display:none}
+  .dl-card{padding-inline:16px}
+  .dl-btn{padding-inline:.8rem;font-size:1rem;gap:.6rem}
 }
 
 @media (max-width:420px){
